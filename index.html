@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /* general */
+        @font-face {
+            font-family: "sepcialelite";
+            src: url("fonts/SpecialElite-Regular.ttf");
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        h3 {
+            text-align: center;
+            font-family: "sepcialelite";
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .page {
+            background-color: rgb(240, 233, 232);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* navigator bar */
+        .navbar {
+            background-color: rgb(92, 77, 58);
+        }
+
+        #navitem {
+            font-family: "sepcialelite";
+            font-size: 18px;
+            color: white;
+        }
+
+        /* cover */
+        #cover {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(238, 138, 8);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #avatar {
+            width: 210px;
+            height: 200px;
+            margin: 160px auto 18px auto;
+        }
+
+        #name {
+            text-align: center;
+            font-family: "sepcialelite";
+            font-size: 30px;
+        }
+
+        #icon-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            margin: 5px;
+        }
+
+        /* about me */
+        #aboutme {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #aboutmepics {
+            margin: 100px;
+        }
+
+        #infoform {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+
+        }
+
+        #aboutmepic {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigator bar -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="navitem" style="font-size: 20px;">Kevin Wong</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#cover" id="navitem">cover<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#am" id="navitem">about me</a></li>
+                    <li><a href="#skills" id="navitem">skills</a></li>
+                    <li><a href="#education" id="navitem">education</a></li>
+                    <li><a href="#focusingon" id="navitem">focusing on</a></li>
+                    <li><a href="#works" id="navitem">works</a></li>
+                    <li><a href="#contactme" id="navitem">contact me</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- cover -->
+    <div id="cover">
+        <img id="avatar" class="img-circle" src="images/avatar.png" alt="avatar">
+        <h3 id="name">Kevin Wong</h3>
+        <div id="icon-list">
+            <img class="icon" src="images/bilibili.svg" />
+            <img class="icon" src="images/抖音.svg" />
+            <img class="icon" src="images/新浪微博.svg" />
+            <img class="icon" src="images/知乎.svg" />
+            <img class="icon" src="images/github.svg" />
+            <img class="icon" src="images/gitee.svg" />
+        </div>
+    </div>
+
+    <!-- about me -->
+    <div style="height: 30px;background-color: rgb(240, 233, 232);" id="am"></div>
+    <h3 style="background-color: rgb(240, 233, 232);">about me</h3>
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+    <div class="page" id="aboutme">
+        <div id="infoform">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" value="Kevin Wong">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" value="22 (in 2023)">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Hobbies</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" value="guitar,coding,movies">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" value="kevin_yiming@163.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Institute</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" value="Qiqihar University">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Major</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" value="Big Data">
+                </div>
+
+            </form>
+        </div>
+        <div id="aboutmepics" class="row">
+            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+                src="Images/IMG_20230110_081758.jpg" alt="">
+            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+                src="Images/mmexport1669651061794.jpg" alt="">
+            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+                src="Images/IMG_20230110_085415.jpg" alt="">
+            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+                src="Images/IMG_20230127_103034.jpg" alt="">
+        </div>
+    </div>
+
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+    <h3 style="background-color: rgb(240, 233, 232);">skills</h3>
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+
+    <div class="page" id="skills">
+
+        <div id="java" style="display: flex;justify-content: center;">
+            <img src="images/java.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="python" style="display: flex;justify-content: center;">
+            <img src="images/python.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cpp" style="display: flex;justify-content: center;">
+            <img src="images/cpp.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scala" style="display: flex;justify-content: center;">
+            <img src="images/scala.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scala" style="display: flex;justify-content: center;">
+            <img src="images/pytorch.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scala" style="display: flex;justify-content: center;">
+            <img src="images/tensorflow.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scala" style="display: flex;justify-content: center;">
+            <img src="images/Hadoop.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
+            <div>
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <div class="page" id="education">
+        
+        <h3>education</h3>
+    </div>
+    <div class="page" id="focusingon">
+        <h3>focusing on</h3>
+    </div>
+    <div class="page" id="works">
+        <h3>works</h3>
+    </div>
+    <div class="page" id="contactme">
+        <h3>contact me</h3>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

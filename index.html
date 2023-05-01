@@ -64,30 +64,30 @@
             background-color: rgb(238, 138, 8);
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         #avatar {
             width: 210px;
             height: 200px;
-            margin: 160px auto 18px auto;
+            /* margin: 160px auto 18px auto; */
+            margin-top: 160px;
+            margin-bottom: 18px;
         }
 
         #name {
-            text-align: center;
             font-family: "sepcialelite";
             font-size: 30px;
         }
 
         #icon-list {
-            display: flex;
-            justify-content: center;
             margin-top: 30px;
         }
 
         .icon {
             height: 40px;
             width: 40px;
-            margin: 5px;
+            margin: 3px;
         }
 
         /* about me */
@@ -95,10 +95,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
         }
 
         #aboutmepics {
-            margin: 100px;
+            margin-top: 50px;
+            margin-bottom: 100px;
         }
 
         #infoform {
@@ -112,12 +114,38 @@
         #aboutmepic {
             margin-top: 20px;
         }
+
+        #skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        /* skill */
+        #skillitem {
+            display: flex;
+            justify-content:  flex-start;
+            width: 85%;
+            margin-bottom: 20px;
+        }
+
+        #skillpic {
+            margin: auto 20px auto 0;
+            height: 100px;
+        }
+
+        #skillright {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
     </style>
 </head>
 
 <body>
     <!-- navigator bar -->
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -135,13 +163,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#cover" id="navitem">cover<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#am" id="navitem">about me</a></li>
-                    <li><a href="#skills" id="navitem">skills</a></li>
-                    <li><a href="#education" id="navitem">education</a></li>
-                    <li><a href="#focusingon" id="navitem">focusing on</a></li>
-                    <li><a href="#works" id="navitem">works</a></li>
-                    <li><a href="#contactme" id="navitem">contact me</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#cover"
+                            id="navitem">cover<span class="sr-only">(current)</span></a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#am" id="navitem"
+                            data-target="#bs-example-navbar-collapse-1">about me</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#skills"
+                            id="navitem">skills</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#education"
+                            id="navitem">education</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#focusingon"
+                            id="navitem">focusing on</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#works"
+                            id="navitem">works</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -149,7 +182,7 @@
 
     <!-- cover -->
     <div id="cover">
-        <img id="avatar" class="img-circle" src="images/avatar.png" alt="avatar">
+        <img id="avatar" class="img-circle" src="images/avatar.jpg" alt="avatar">
         <h3 id="name">Kevin Wong</h3>
         <div id="icon-list">
             <a href="https://www.baidu.com"><img class="icon" src="images/bilibili.svg" /></a>
@@ -166,7 +199,7 @@
     <h3 style="background-color: rgb(240, 233, 232);">about me</h3>
     <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
     <div class="page" id="aboutme">
-        <div id="infoform">
+        <div id="infoform" style="background-color:rgb(245, 235, 235);">
             <form>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Name</label>
@@ -200,13 +233,17 @@
             </form>
         </div>
         <div id="aboutmepics" class="row">
-            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+            <img id="aboutmepic"
+                class="col-lg-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-md-6 img-rounded"
                 src="images/changsha.png" alt="">
-            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+            <img id="aboutmepic"
+                class="col-lg-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-md-6  img-rounded"
                 src="images/mmexport1669651061794.jpg" alt="">
-            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+            <img id="aboutmepic"
+                class="col-lg-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-md-6 img-rounded"
                 src="images/xiangjiang.jpg" alt="">
-            <img id="aboutmepic" class="col-lg-4 col-sm-10 col-md-6 img-responsive img-rounded"
+            <img id="aboutmepic"
+                class="col-lg-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-md-6  img-rounded"
                 src="images/IMG_20230127_103034.jpg" alt="">
         </div>
     </div>
@@ -217,135 +254,211 @@
 
     <div class="page" id="skills">
 
-        <div id="java" style="display: flex;justify-content: center;">
-            <img src="images/java.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;"
-                class="img-circle" />
-            <div>
+        <div id="skillitem">
+            <img src="images/java.svg" alt="java" id="skillpic" class="img-circle" />
+            <div id="skillright">
                 <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="python" style="display: flex;justify-content: center;">
-            <img src="images/python.svg" alt="java"
-                style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
-            <div>
-                <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="cpp" style="display: flex;justify-content: center;">
-            <img src="images/cpp.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;"
-                class="img-circle" />
-            <div>
-                <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                    <code>know basic grammer, some advanced features like lambda expression and some frameworks like mybatis,spring boot, etc.</code>
                 </div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">70% Complete (success)</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="scala" style="display: flex;justify-content: center;">
-            <img src="images/scala.svg" alt="java" style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;"
-                class="img-circle" />
-            <div>
+
+
+        <div id="skillitem">
+            <img src="images/python.svg" alt="python" id="skillpic" class="img-circle" />
+            <div id="skillright">
                 <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
+                    <code>know basic grammer, some advanced features like magic methods, and many library like requests</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillitem">
+            <img src="images/cpp.svg" alt="cpp" id="skillpic" class="img-circle" />
+            <div id="skillright">
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer and memory models</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillitem">
+            <img src="images/scala.svg" alt="scala" id="skillpic" class="img-circle" />
+            <div id="skillright">
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic grammer, functional programing, pattern guard, etc.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillitem">
+            <img src="images/pytorch.svg" alt="pytorch" id="skillpic" class="img-circle" />
+            <div id="skillright">
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic usage.</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillitem">
+            <img src="images/tensorflow.svg" alt="java" id="skillpic" class="img-circle" />
+            <div id="skillright">
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic usage</code>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillitem">
+            <img src="images/Hadoop.svg" alt="java" id="skillpic" class="img-circle" />
+            <div id="skillright">
+                <div style="margin: 20px auto;font-size: 18px;">
+                    <code>know basic usage about htfs,yarn,mapreduce</code>
                 </div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
+                        <span class="sr-only">70% Complete (success)</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="scala" style="display: flex;justify-content: center;">
-            <img src="images/pytorch.svg" alt="java"
-                style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
-            <div>
-                <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="scala" style="display: flex;justify-content: center;">
-            <img src="images/tensorflow.svg" alt="java"
-                style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
-            <div>
-                <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="scala" style="display: flex;justify-content: center;">
-            <img src="images/Hadoop.svg" alt="java"
-                style="width: 80px;height: 80px;margin-right: 30px;margin-top: 10px;" class="img-circle" />
-            <div>
-                <div style="margin: 20px auto;font-size: 18px;">
-                    <code>know basic grammer, and some advanced features like lambda expression, stream, etc.</code>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
-
+    <div style="height: 50px;background-color: rgb(240, 233, 232);"></div>
+    <h3 style="background-color: rgb(240, 233, 232);">education</h3>
+    <div style="height: 50px;background-color: rgb(240, 233, 232);"></div>
     <div class="page" id="education">
 
-        <h3>education</h3>
-    </div>
+        <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="images/qqhru.jpg" style="width: 150px; height: 150px;" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading">Qiqihar University</h2>
+                2020-2024,From which abtained bachelor's degree and be introduced into computer world.
+                <br/>
+                Mastered array of skills:
+                <br/>
+                programming language: C/C++, Java, Scala, Python
+                <br/>
+                web development: HTML, CSS, JavaScript, Vue, Spring
+                <br/>
+                database: MySQL, MongoDB, Redis
+                <br/>
+                big data: Hadoop, Spark, Hive, HBase
+                <br/>
+                machine learning: PyTorch, TensorFlow
+                <br/>
+
+              </div>
+            
+          </div>
+
+
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+    <h3 style="background-color: rgb(240, 233, 232);">focusing on</h3>
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
     <div class="page" id="focusingon">
-        <h3>focusing on</h3>
-    </div>
-    <div class="page" id="works">
-        <h3>works</h3>
-    </div>
-    <div class="page" id="contactme">
-        <h3>contact me</h3>
+
+        <ul class="list-group">
+            <li class="list-group-item col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1"><span class="badge">10</span>study digigently to be admitted into Harbin Institute of Technology</li>
+            <li class="list-group-item col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1"><span class="badge">8</span>participate in various competition to be awared the national scholarship </li>
+            <li class="list-group-item col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1"><span class="badge">6</span>create awesome projects that used by loads of people</li>
+            <li class="list-group-item col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1"><span class="badge">6</span>join in the open-source community and contribute my efforts</li>
+            <li class="list-group-item col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1"><span class="badge">4</span>be social and make acquaintance with people who share my hobbies</li>
+            
+        </ul>
+
+
     </div>
 
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+    <h3 style="background-color: rgb(240, 233, 232);">works</h3>
+    <div style="height: 30px;background-color: rgb(240, 233, 232);"></div>
+    <div class="page" id="works">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/pretigude.png" alt="...">
+                <div class="caption">
+                  <h3>pretigude</h3>
+                  <p>a pure C library with stl-like generic data structures and some util functions which help you develop as fast as cpp and even java! check out this project,please press the buttons below.</p>
+                  <p><a href="https://github.com/Kevin-WongCHN/pretigude" class="btn btn-primary" role="button">Github</a> 
+                    <a href="#" class="btn btn-primary" role="button">Gitee</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/pretigude.png" alt="...">
+                  <div class="caption">
+                    <h3>pretigude</h3>
+                    <p>a pure C library with stl-like generic data structures and some util functions which help you develop as fast as cpp and even java! check out this project,please press the buttons below.</p>
+                    <p><a href="https://github.com/Kevin-WongCHN/pretigude" class="btn btn-primary" role="button">Github</a> 
+                      <a href="#" class="btn btn-primary" role="button">Gitee</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/pretigude.png" alt="...">
+                  <div class="caption">
+                    <h3>pretigude</h3>
+                    <p>a pure C library with stl-like generic data structures and some util functions which help you develop as fast as cpp and even java! check out this project,please press the buttons below.</p>
+                    <p><a href="https://github.com/Kevin-WongCHN/pretigude" class="btn btn-primary" role="button">Github</a> 
+                      <a href="#" class="btn btn-primary" role="button">Gitee</a></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+    </div>
+    <footer>
+        <p>版权所有 © 2023- Kevin Wong</p>
+      </footer>
+      
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="js/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
